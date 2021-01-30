@@ -13,7 +13,7 @@ def hello_world():
 # Adds support for GET requests to our webhook
 @app.route('/webhook',methods=['GET'])
 def webhook_authorization():
-    verify_token = request.args.get("EAAYXNRGZCYRUBAFiTa0Qvcz1E8Hw91Cav4KLIYZBq3hIh5G1wStqYn0GnEk1m6EsWWrpCh8ZBQhZBAbcUbLo06YpvsvgsybgdFU8aAGaQOlHdVWvSDDulN4s1jZB6stuKznqz6eO5DFw1GeE2I1kbG1md26fDxev2mAbByNYjZBe10GLTZCgDuq")
+    verify_token = request.args.get("hub.EAAYXNRGZCYRUBAFiTa0Qvcz1E8Hw91Cav4KLIYZBq3hIh5G1wStqYn0GnEk1m6EsWWrpCh8ZBQhZBAbcUbLo06YpvsvgsybgdFU8aAGaQOlHdVWvSDDulN4s1jZB6stuKznqz6eO5DFw1GeE2I1kbG1md26fDxev2mAbByNYjZBe10GLTZCgDuq")
     # Check if sent token is correct
     if verify_token == credentials.WEBHOOK_VERIFY_TOKEN:
         # Responds with the challenge token from the request
